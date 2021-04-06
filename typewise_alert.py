@@ -49,7 +49,7 @@ def send_to_controller(breach_type):
 
 def send_to_email(breach_type):
     email_message = email_alert_message[breach_type]
-    email_data = f"To {email_message['recipient']},\n \t Hello, \n \t {email_message['alert']}"
+    email_data = f"To {email_message['receiver_address']},\n \t Hello, \n \t {email_message['alert']}"
     print(email_data)
     return "EMAIL_SENT"
 
